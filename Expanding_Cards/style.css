@@ -7,7 +7,6 @@
 body {
   font-family: "Muli", sans-serif;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -17,7 +16,7 @@ body {
 
 .container {
   display: flex;
-  width: 90vh;
+  width: 90vw;
 }
 
 .panel {
@@ -31,7 +30,7 @@ body {
   flex: 0.5;
   margin: 10px;
   position: relative;
-  transition: flex 0.7s ease-in;
+  transition: all 700ms ease-in;
 }
 
 h1 {
@@ -61,7 +60,18 @@ h1 {
 
 @media (max-width: 480px) {
   .container {
-    width: 100vh;
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
   }
 
   .panel:nth-of-type(4),
